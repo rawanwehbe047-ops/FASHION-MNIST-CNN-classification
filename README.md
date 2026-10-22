@@ -4,9 +4,7 @@ A beginner-friendly image classification project using **PyTorch** and a **Convo
 
 ## Try it in Google Colab (no setup needed)
 
-Open the notebook to view the code, graphs, and outputs. To run everything, choose **Runtime → Run all** in Colab. The first run may take a little time while libraries and data load.
-
-[**Open the project in Google Colab**](https://colab.research.google.com/drive/1-VNAXB9REgiR9YJqvyJ_C9_B2ArYm4mw?usp=sharing)
+[fashion_mnist_cnn.ipynb - Colab](https://colab.research.google.com/github/rawanwehbe047-ops/FASHION-MNIST-CNN-classification/blob/main/fashion_mnist_cnn.ipynb)
 
 ## What this project does
 
