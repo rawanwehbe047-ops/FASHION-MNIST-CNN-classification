@@ -1,53 +1,57 @@
 # Fashion-MNIST Image Classification Using CNN
 
-## Project Overview
+A beginner-friendly image classification project using **PyTorch** and a **Convolutional Neural Network (CNN)**. The model learns to identify 10 types of clothing from small grayscale images in the Fashion-MNIST dataset.
 
-This project uses a Convolutional Neural Network (CNN) to classify clothing images from the Fashion-MNIST dataset.
+## Try it in Google Colab (no setup needed)
 
-The goal is to train a deep learning model that can recognize clothing categories such as T-shirts, trousers, pullovers, dresses, sneakers, bags, and more.
+Open the notebook to view the code, graphs, and outputs. To run everything, choose **Runtime → Run all** in Colab. The first run may take a little time while libraries and data load.
 
-I created this project to practice computer vision, deep learning, and image classification using Python and PyTorch.
+[**Open the project in Google Colab**](https://colab.research.google.com/drive/1-VNAXB9REgiR9YJqvyJ_C9_B2ArYm4mw?usp=sharing)
 
-## Explore the Notebook
+## What this project does
 
-**Open the project in Google Colab:**
+- Downloads the Fashion-MNIST dataset.
+- Resizes images to 16 × 16 pixels and converts them to tensors.
+- Builds a CNN with two convolution layers and max-pooling.
+- Trains the model for five epochs.
+- Tracks loss and accuracy across epochs.
+- Displays sample clothing images and model predictions.
 
-[Open Fashion-MNIST CNN in Google Colab](https://colab.research.google.com/drive/1-VNAXB9REgiR9YJqvyJ_C9_B2ArYm4mw?usp=sharing)
+## Dataset
 
-You can view the notebook and its outputs. To run the code yourself, open it in Colab and follow the notebook cells.
+Fashion-MNIST contains 70,000 grayscale images across 10 categories: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, and Ankle boot. The standard split contains 60,000 training images and 10,000 test images.
 
-## Current Training Results
+Dataset source: [Fashion-MNIST on GitHub](https://github.com/zalandoresearch/fashion-mnist).
 
-The current notebook run shows approximately **88% accuracy after 5 epochs**. This is the accuracy recorded in the training/evaluation output and should not be described as a final test-set result until the evaluation setup is confirmed.
+## Project files
 
-The training graph shows:
-- Cost decreasing over the five epochs.
-- Accuracy increasing over the five epochs.
+- `fashion_mnist_cnn.ipynb` — notebook version, best for exploring the project in Colab.
+- `fashion_mnist_cnn.py` — Python script version.
+- `requirements.txt` — packages needed to run the script.
 
-## Technologies
+## Run locally
+
+Use Python 3.10 or newer.
+
+```bash
+pip install -r requirements.txt
+python fashion_mnist_cnn.py
+```
+
+The dataset downloads automatically the first time the script runs.
+
+## Model notes
+
+The model uses two convolution layers, ReLU activation, max-pooling, and a final linear layer that returns scores for 10 classes. It is trained using cross-entropy loss and stochastic gradient descent (SGD).
+
+The development notebook showed approximately **88% accuracy after five epochs**. Results can vary with runtime and training settings. The notebook checks accuracy on the test split after each epoch, so treat this as a progress metric rather than a final independent evaluation.
+
+## Tools
 
 - Python
-- PyTorch
-- Torchvision
+- PyTorch and Torchvision
 - Matplotlib
-- Google Colab
-- Convolutional Neural Networks (CNNs)
-
-## What I Practiced
-
-- Building a CNN model.
-- Training a model with PyTorch.
-- Measuring classification accuracy.
-- Plotting training results.
-- Learning how deep learning can classify images.
-
-## Future Improvements
-
-- Show predictions for individual clothing images.
-- Display predicted and actual labels together.
-- Experiment with different CNN architectures and training settings.
-- Evaluate performance on a clearly separated test dataset.
+- Google Colab / Jupyter Notebook
 
 ---
-
-This project is part of my learning journey in Artificial Intelligence and Deep Learning.
+Created as a learning project to practice CNN image classification.
